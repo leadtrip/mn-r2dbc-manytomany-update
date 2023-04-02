@@ -1,0 +1,27 @@
+micronaut:
+  application:
+    name: micronautguide
+
+flyway:
+  datasources:
+    default:
+      enabled: true
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5434/postgres
+    username: r2m2m
+    password: r2m2m
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+
+r2dbc:
+  datasources:
+    default:
+      dialect: postgres
+      url: r2dbc:postgresql://localhost:5434/postgres
+      username: r2m2m
+      password: r2m2m
+netty:
+  default:
+    allocator:
+      max-order: 3
